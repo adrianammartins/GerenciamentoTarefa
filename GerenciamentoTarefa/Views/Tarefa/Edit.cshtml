@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Tarefa
+
+<h2>Editar Tarefa</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="TarefaId" />
+    <div class="form-group" style="margin-top: 20px;">
+        <label asp-for="NomeTarefa " class="control-label"></label>
+        <input asp-for="NomeTarefa " class="form-control" />
+        <span asp-validation-for="NomeTarefa " class="text-danger"></span>
+    </div>
+    <div class="form-group" style="margin-bottom: 10px;">
+        <label asp-for="Descricao " class="control-label"></label>
+        <input asp-for="Descricao" class="form-control" />
+        <span asp-validation-for="Descricao" class="text-danger"></span>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 10px;">
+        <label asp-for="Prioridade " class="control-label"></label>
+        <input asp-for="Prioridade" class="form-control" />
+        <span asp-validation-for="Prioridade" class="text-danger"></span>
+      </div>
+ <!-- <div class="form-group">
+       <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+            <option selected asp-for="Prioridade " class="control-label">Selecione a prioridade</option>
+            <option value="Baixa Prioridade">Baixa prioridade</option>
+            <option value="Media Prioridade">Média prioridade</option>
+            <option value="Alta Prioridade">Alta prioridade</option>
+          </select>
+         </div>-->
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
